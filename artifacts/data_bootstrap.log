@@ -1,0 +1,13 @@
+
+> data:bootstrap
+> node scripts/bootstrap_data.mjs
+
+Error: fetch failed
+    at BufferFetcher.fetchBuffer (/home/runner/work/LoopsGPT/LoopsGPT/node_modules/dukascopy-node/dist/index.js:16666:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async /home/runner/work/LoopsGPT/LoopsGPT/node_modules/dukascopy-node/dist/index.js:16566:22
+    at async Promise.all (index 0)
+    at async BufferFetcher.fetch (/home/runner/work/LoopsGPT/LoopsGPT/node_modules/dukascopy-node/dist/index.js:16610:20)
+    at async getHistoricalRates (/home/runner/work/LoopsGPT/LoopsGPT/node_modules/dukascopy-node/dist/index.js:17272:25)
+    at async updateSpec (file:///home/runner/work/LoopsGPT/LoopsGPT/scripts/bootstrap_data.mjs:143:19)
+    at async main (file:///home/runner/work/LoopsGPT/LoopsGPT/scripts/bootstrap_data.mjs:199:43)

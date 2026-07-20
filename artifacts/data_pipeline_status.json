@@ -1,0 +1,9 @@
+{
+  "workflow_run_id": "29785930755",
+  "head_sha": "f1904114e41acc67bf0afc0dea7a23723a92001d",
+  "event": "push",
+  "bootstrap_outcome": "failure",
+  "cache_hit": "",
+  "utc_day": "2026-07-20",
+  "recorded_at": "2026-07-20T23:08:03Z"
+}
