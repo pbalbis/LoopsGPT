@@ -112,7 +112,7 @@ async function downloadChunk(spec, from, to) {
     useCache: true,
     cacheFolderPath: CACHE,
     retryCount: 5,
-    retryOnEmpty: true,
+    retryOnEmpty: false,
     failAfterRetryCount: true,
     pauseBetweenRetriesMs: 1500,
   });
@@ -127,7 +127,10 @@ async function updateSpec(spec, endExclusive) {
 
   let cursor = configuredStart;
   if (rows.size > 0) {
-    const last = Math.max(...rows.keys());
+    let last = 0;
+    for (const timestamp of rows.keys()) {
+      if (timestamp > last) last = timestamp;
+    }
     cursor = new Date(Math.max(configuredStart.getTime(), last + intervalMs));
   }
 
