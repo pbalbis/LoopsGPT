@@ -1,7 +1,3 @@
-
-> data:bootstrap
-> node scripts/bootstrap_data.mjs
-
 {
   "schema_version": 1,
   "generated_at": "2026-07-20T23:14:32.887Z",
