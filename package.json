@@ -7,7 +7,7 @@
     "node": ">=20"
   },
   "dependencies": {
-    "dukascopy-node": "1.46.4"
+    "dukascopy-node": "1.49.0"
   },
   "scripts": {
     "data:bootstrap": "node scripts/bootstrap_data.mjs"
