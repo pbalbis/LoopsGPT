@@ -1,0 +1,14 @@
+{
+  "name": "loops-gpt-quantos-data",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dukascopy-node": "1.46.4"
+  },
+  "scripts": {
+    "data:bootstrap": "node scripts/bootstrap_data.mjs"
+  }
+}
