@@ -1,5 +1,6 @@
 {
   "name": "loops-gpt-quantos-data",
+  "description": "Reproducible XAUUSD data bootstrap for QuantOS",
   "private": true,
   "type": "module",
   "engines": {
