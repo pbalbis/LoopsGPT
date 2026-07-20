@@ -5,3 +5,6 @@ __pycache__/
 .env
 artifacts/tmp/
 state/*.lock
+node_modules/
+.cache/
+data/raw/*.csv.gz
