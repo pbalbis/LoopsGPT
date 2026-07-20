@@ -11,7 +11,7 @@ const ROOT = path.resolve(__dirname, '..');
 const RAW = path.join(ROOT, 'data', 'raw');
 const CACHE = path.join(ROOT, '.cache', 'dukascopy');
 const MANIFEST = path.join(ROOT, 'data', 'manifest.json');
-const SOURCE_VERSION = 'dukascopy-node@1.46.4';
+const SOURCE_VERSION = 'dukascopy-node@1.49.0';
 const CSV_HEADER = 'timestamp,open,high,low,close,volume,timeframe';
 
 const SPECS = [
