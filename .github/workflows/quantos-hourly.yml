@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/bootstrap_data.mjs'
+      - 'scripts/restore_seed.mjs'
       - 'package.json'
       - 'quantos.py'
       - 'config/**'
@@ -24,6 +25,8 @@ jobs:
   run:
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    env:
+      NODE_OPTIONS: --dns-result-order=ipv4first
     steps:
       - uses: actions/checkout@v4
 
@@ -39,16 +42,33 @@ jobs:
           path: |
             data/raw
             .cache/dukascopy
-          key: quantos-xauusd-v1-${{ steps.utc.outputs.day }}
+          key: quantos-xauusd-v2-${{ steps.utc.outputs.day }}
           restore-keys: |
-            quantos-xauusd-v1-
+            quantos-xauusd-v2-
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '20'
+
+      - name: Probe Dukascopy transport
+        continue-on-error: true
+        shell: bash
+        run: |
+          mkdir -p artifacts
+          {
+            echo 'HTTPS IPv4:'
+            curl -4 -sSIL --connect-timeout 15 --max-time 30 'https://datafeed.dukascopy.com/datafeed/XAUUSD/2026/06/17/00h_ticks.bi5'
+            echo 'HTTP IPv4:'
+            curl -4 -sSIL --connect-timeout 15 --max-time 30 'http://datafeed.dukascopy.com/datafeed/XAUUSD/2026/06/17/00h_ticks.bi5'
+          } > artifacts/dukascopy_probe.log 2>&1
 
       - name: Install pinned market-data client
         run: npm install --ignore-scripts --no-audit --no-fund
+
+      - name: Restore deterministic seed when available
+        if: hashFiles('data/seed/XAUUSD15.seed.br.b64.part-*') != ''
+        run: |
+          if [ ! -f data/raw/XAUUSD15.csv.gz ]; then node scripts/restore_seed.mjs; fi
 
       - name: Bootstrap and increment XAUUSD data
         id: bootstrap
@@ -92,7 +112,7 @@ jobs:
             data/raw/XAUUSD15.csv.gz
             data/raw/XAUUSD1.csv.gz
             data/manifest.json
-          if-no-files-found: error
+          if-no-files-found: warn
           retention-days: 14
           compression-level: 0
 
