@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-20T23:14:32.887Z",
+  "generated_at": "2026-07-20T23:18:26.023Z",
   "complete_through_utc_exclusive": "2026-07-20T00:00:00.000Z",
   "reproducibility": {
     "instrument": "xauusd",
     "utc_offset": 0,
     "ignore_flats": true,
     "price_type": "bid",
-    "source_version": "dukascopy-node@1.46.4"
+    "source_version": "dukascopy-node@1.49.0"
   },
   "datasets": [
     {
       "source": "Dukascopy Bank historical feed via dukascopy-node",
-      "source_version": "dukascopy-node@1.46.4",
+      "source_version": "dukascopy-node@1.49.0",
       "instrument": "XAUUSD",
       "price_side": "bid",
       "timeframe": "m15",
@@ -28,7 +28,7 @@
     },
     {
       "source": "Dukascopy Bank historical feed via dukascopy-node",
-      "source_version": "dukascopy-node@1.46.4",
+      "source_version": "dukascopy-node@1.49.0",
       "instrument": "XAUUSD",
       "price_side": "bid",
       "timeframe": "m1",

@@ -1,0 +1,12 @@
+HTTPS IPv4:
+HTTP/2 503 
+content-length: 107
+cache-control: no-cache
+content-type: text/html
+
+HTTP IPv4:
+curl: (28) Operation timed out after 30002 milliseconds with 0 bytes received
+HTTP/1.1 301 Moved Permanently
+content-length: 0
+location: https://datafeed.dukascopy.com/datafeed/XAUUSD/2026/06/17/00h_ticks.bi5
+
