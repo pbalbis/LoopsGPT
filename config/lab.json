@@ -1,0 +1,23 @@
+{
+  "contract": {
+    "initial_capital": 1000.0,
+    "risk_fraction": 0.02,
+    "cost_per_side_per_001": 0.18,
+    "tp1_r": 1.0,
+    "tp1_fraction": 0.5,
+    "tp2_min_r": 1.0,
+    "tp2_max_r": 4.0,
+    "asia_start_hour_utc": 0,
+    "asia_end_hour_utc": 7
+  },
+  "gates": {
+    "pf_global_min": 2.0,
+    "pf_year_min": 1.5,
+    "pf_half_min": 1.5,
+    "max_drawdown_max": 0.10,
+    "trades_per_day_min": 1.0,
+    "pnl_daily_min": 30.0
+  },
+  "budget": {"explore": 0.45, "deepen": 0.25, "validate": 0.20, "ensemble": 0.10},
+  "architectures": ["A01","A02","A03","A04","A05","A06","A07","A08","A09","A10","A11","A12","A13"]
+}

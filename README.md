@@ -1,18 +1,24 @@
 # LoopsGPT — QuantOS XAUUSD
 
-Repository-backed, token-efficient quantitative research system for XAUUSD.
+A repository-backed, token-efficient quantitative research loop for XAUUSD.
 
-Mechanical research runs through GitHub Actions. ChatGPT is reserved for periodic synthesis, contradiction resolution, architecture decisions, and validation.
+## Design
 
-## Core design
+- Hourly atomic research jobs in GitHub Actions.
+- Compact versioned ledger and evidence-linked decisions.
+- Experiment hashing and deduplication.
+- Expected-information-gain queue.
+- LIGHT/MID/DEEP adaptive compute.
+- Automatic pruning, freezing and periodic audits.
+- ChatGPT reserved for high-value synthesis instead of mechanical runs.
 
-- Atomic micro-jobs with adaptive budgets.
-- Structured and versioned research ledger.
-- SHA-256 experiment deduplication.
-- Expected-information-gain priority queue.
-- Architecture inheritance and feature registry.
-- Automatic branch pruning and family freezing.
-- Walk-forward, robustness, cost and regime validation.
-- Compact evidence graph separating facts from inferences.
+## Quick start
 
-See `DEPLOY.md` and `IMPLEMENTATION_REPORT.md` for operational details.
+```bash
+python -m pip install -e '.[dev]'
+python quantos.py status
+python quantos.py run
+pytest
+```
+
+Place the M15 dataset at `data/raw/XAUUSD15.csv.gz`. See `data/README.md`.

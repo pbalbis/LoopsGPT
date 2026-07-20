@@ -1,0 +1,8 @@
+{
+  "jobs": [
+    {"id":"A01-B001","architecture":"A01","kind":"explore","uncertainty":1.0,"expected_improvement":0.5,"search_reduction":0.8,"validation_priority":0.2},
+    {"id":"A06-B001","architecture":"A06","kind":"explore","uncertainty":1.0,"expected_improvement":0.5,"search_reduction":0.7,"validation_priority":0.2},
+    {"id":"A07-B001","architecture":"A07","kind":"explore","uncertainty":1.0,"expected_improvement":0.5,"search_reduction":0.7,"validation_priority":0.2},
+    {"id":"A09-B001","architecture":"A09","kind":"explore","uncertainty":1.0,"expected_improvement":0.5,"search_reduction":0.7,"validation_priority":0.2}
+  ]
+}

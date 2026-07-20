@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "run_id": 0,
+  "mode": "LIGHT",
+  "objective": "Meet all institutional gates simultaneously without lookahead",
+  "current_best": null,
+  "validated_facts": [],
+  "rejected_hypotheses": [],
+  "open_questions": ["Which architecture has isolated edge after costs?"],
+  "known_failures": [],
+  "deep_triggers": [],
+  "stall_count": 0,
+  "next_action": "Run highest-EIG atomic experiment",
+  "artifact_pointers": [],
+  "confidence": 0.0
+}
