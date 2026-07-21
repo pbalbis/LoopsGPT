@@ -15,14 +15,14 @@
     "timestamp": "2026-07-21T06:42:10.155262+00:00"
   },
   "mode": "LIGHT",
-  "next_action": "Resolve evaluator/data blocker",
+  "next_action": "Generate a new high-EIG job",
   "objective": "Meet all institutional gates simultaneously without lookahead",
   "open_questions": [
     "Which architecture has isolated edge after costs?"
   ],
   "rejected_hypotheses": [],
   "run_id": 4,
-  "stall_count": 0,
+  "stall_count": 1,
   "validated_facts": [],
   "version": 5
 }
