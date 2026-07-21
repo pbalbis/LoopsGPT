@@ -5,14 +5,14 @@
   "deep_triggers": [],
   "known_failures": [],
   "last_experiment": {
-    "architecture": "A07",
+    "architecture": "A09",
     "diagnosis": "EVALUATOR_PENDING",
     "evidence": "data/raw/XAUUSD15.csv.gz sha256=984feb0ae576bf41628a539c0109fce6a3d97034ec1fca8a1ea20b044b10ce76 rows=100141 coverage=2022-04-26T00:00:00.000Z..2026-07-20T23:45:00.000Z",
-    "experiment_hash": "91051b230195643c",
+    "experiment_hash": "e70d7a33f932ebdd",
     "metrics": {},
     "progress": "CONFIG_EVALUATED",
     "status": "NO_PROGRESS",
-    "timestamp": "2026-07-21T03:46:25.266462+00:00"
+    "timestamp": "2026-07-21T06:42:10.155262+00:00"
   },
   "mode": "LIGHT",
   "next_action": "Resolve evaluator/data blocker",
@@ -21,8 +21,8 @@
     "Which architecture has isolated edge after costs?"
   ],
   "rejected_hypotheses": [],
-  "run_id": 3,
+  "run_id": 4,
   "stall_count": 0,
   "validated_facts": [],
-  "version": 4
+  "version": 5
 }
