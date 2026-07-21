@@ -1,0 +1,43 @@
+name: QuantOS Windows VPS Node
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'ops/windows/**'
+      - 'bridge/**'
+      - '.github/workflows/vps-node.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quantos-windows-vps
+  cancel-in-progress: false
+
+jobs:
+  verify-node:
+    runs-on: [self-hosted, Windows, X64, quantos-vps]
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run VPS bootstrap
+        shell: powershell
+        run: |
+          Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
+          .\ops\windows\bootstrap.ps1
+
+      - name: Verify Python and MetaTrader package
+        shell: powershell
+        run: |
+          C:\QuantOS\venv\Scripts\python.exe -c "import MetaTrader5 as mt5; print('MetaTrader5 package:', mt5.__version__)"
+          Get-Content C:\QuantOS\logs\health.json
+
+      - name: Publish node health
+        uses: actions/upload-artifact@v4
+        with:
+          name: quantos-windows-node-health
+          path: C:\QuantOS\logs\health.json
+          retention-days: 14
