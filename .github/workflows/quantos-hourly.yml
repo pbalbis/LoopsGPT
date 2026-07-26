@@ -1,4 +1,4 @@
-name: QuantOS Hourly Micro-Job
+name: QuantOS Hourly Evaluator
 
 on:
   schedule:
@@ -10,7 +10,8 @@ on:
       - 'scripts/bootstrap_data.mjs'
       - 'scripts/restore_seed.mjs'
       - 'package.json'
-      - 'quantos.py'
+      - 'evaluator.py'
+      - 'run_a01.py'
       - 'pyproject.toml'
       - 'config/**'
       - '.github/workflows/quantos-hourly.yml'
@@ -111,15 +112,15 @@ jobs:
           python-version: '3.11'
           cache: pip
 
-      - name: Install QuantOS
+      - name: Install QuantOS evaluator
         if: steps.bootstrap.outcome == 'success'
         run: python -m pip install -e .
 
-      - name: Execute one atomic job
+      - name: Execute deterministic A01 evaluation
         if: steps.bootstrap.outcome == 'success'
-        run: python quantos.py run
+        run: python run_a01.py
 
-      - name: Commit reproducible state and diagnostics
+      - name: Commit reproducible state and evidence
         if: always()
         shell: bash
         run: |
@@ -128,9 +129,20 @@ jobs:
           git add state artifacts
           if [ -f data/manifest.json ]; then git add data/manifest.json; fi
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m '[quantos] data pipeline and research delta'
+          git commit -m '[quantos] deterministic A01 evaluation'
           git pull --rebase origin main
           git push origin HEAD:main
+
+      - name: Publish evaluation evidence
+        if: steps.bootstrap.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: quantos-a01-${{ github.run_id }}
+          path: |
+            artifacts/latest_run.json
+            artifacts/experiments/**
+          if-no-files-found: error
+          retention-days: 30
 
       - name: Fail closed when data bootstrap fails
         if: steps.bootstrap.outcome != 'success'
