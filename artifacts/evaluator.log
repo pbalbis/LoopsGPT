@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/runner/work/LoopsGPT/LoopsGPT/run_a01.py", line 8, in <module>
+    from evaluator import evaluate_a01
+  File "/home/runner/work/LoopsGPT/LoopsGPT/evaluator.py", line 11, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
