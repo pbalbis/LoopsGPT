@@ -4,17 +4,16 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "quantos-xauusd"
-version = "0.5.1"
+version = "0.5.2"
 description = "Token-efficient repository-backed XAUUSD research loop"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = ["numpy>=1.26,<3", "pandas>=2.2,<3"]
 
 [project.optional-dependencies]
-research = ["numpy>=1.26,<3", "pandas>=2.2,<3"]
 dev = ["pytest>=8,<9"]
 
 [tool.setuptools]
-py-modules = ["quantos"]
+py-modules = ["quantos", "evaluator", "run_a01"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
