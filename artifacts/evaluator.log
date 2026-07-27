@@ -1,6 +1,21 @@
-Traceback (most recent call last):
-  File "/home/runner/work/LoopsGPT/LoopsGPT/run_a01.py", line 8, in <module>
-    from evaluator import evaluate_a01
-  File "/home/runner/work/LoopsGPT/LoopsGPT/evaluator.py", line 11, in <module>
-    import numpy as np
-ModuleNotFoundError: No module named 'numpy'
+{
+  "experiment_hash": "6b1f1ce72ba6a7f2",
+  "architecture": "A01",
+  "status": "FAIL",
+  "progress": "EVALUATED",
+  "diagnosis": "PF_LOW,Y_LOW,H_LOW,DD_HIGH,FREQ_LOW,PNL_LOW",
+  "metrics": {
+    "trades": 330,
+    "pf": 0.8190825983905891,
+    "pf_year_min": 0.6844867712313919,
+    "pf_half_min": 0.24291645626438013,
+    "max_drawdown": 0.4620499714285704,
+    "trades_per_day": 0.21262886597938144,
+    "pnl_daily": -0.2432423140648003,
+    "net_pnl": -377.51207142857004,
+    "win_rate": 0.5333333333333333,
+    "ending_equity": 622.4879285714283
+  },
+  "evidence": "artifacts/experiments/6b1f1ce72ba6a7f2",
+  "timestamp": "2026-07-27T22:27:59.370803+00:00"
+}

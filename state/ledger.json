@@ -1,28 +1,41 @@
 {
-  "artifact_pointers": [],
+  "artifact_pointers": [
+    "artifacts/experiments/6b1f1ce72ba6a7f2"
+  ],
   "confidence": 0.0,
   "current_best": null,
   "deep_triggers": [],
   "known_failures": [],
   "last_experiment": {
-    "architecture": "A09",
-    "diagnosis": "EVALUATOR_PENDING",
-    "evidence": "data/raw/XAUUSD15.csv.gz sha256=984feb0ae576bf41628a539c0109fce6a3d97034ec1fca8a1ea20b044b10ce76 rows=100141 coverage=2022-04-26T00:00:00.000Z..2026-07-20T23:45:00.000Z",
-    "experiment_hash": "e70d7a33f932ebdd",
-    "metrics": {},
-    "progress": "CONFIG_EVALUATED",
-    "status": "NO_PROGRESS",
-    "timestamp": "2026-07-21T06:42:10.155262+00:00"
+    "architecture": "A01",
+    "diagnosis": "PF_LOW,Y_LOW,H_LOW,DD_HIGH,FREQ_LOW,PNL_LOW",
+    "evidence": "artifacts/experiments/6b1f1ce72ba6a7f2",
+    "experiment_hash": "6b1f1ce72ba6a7f2",
+    "metrics": {
+      "ending_equity": 622.4879285714283,
+      "max_drawdown": 0.4620499714285704,
+      "net_pnl": -377.51207142857004,
+      "pf": 0.8190825983905891,
+      "pf_half_min": 0.24291645626438013,
+      "pf_year_min": 0.6844867712313919,
+      "pnl_daily": -0.2432423140648003,
+      "trades": 330,
+      "trades_per_day": 0.21262886597938144,
+      "win_rate": 0.5333333333333333
+    },
+    "progress": "EVALUATED",
+    "status": "FAIL",
+    "timestamp": "2026-07-27T22:27:59.370803+00:00"
   },
-  "mode": "LIGHT",
-  "next_action": "Generate a new high-EIG job",
+  "mode": "DEEP",
+  "next_action": "Diagnose A01 failure and generate one bounded refinement",
   "objective": "Meet all institutional gates simultaneously without lookahead",
   "open_questions": [
     "Which architecture has isolated edge after costs?"
   ],
   "rejected_hypotheses": [],
-  "run_id": 4,
-  "stall_count": 65,
+  "run_id": 5,
+  "stall_count": 0,
   "validated_facts": [],
-  "version": 5
+  "version": 6
 }
