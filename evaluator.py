@@ -3,6 +3,7 @@ from __future__ import annotations
 import gzip
 import hashlib
 import json
+import math
 from dataclasses import dataclass, asdict
 from pathlib import Path
 from typing import Any
@@ -29,6 +30,29 @@ class Trade:
 def _hash(value: Any) -> str:
     payload = json.dumps(value, sort_keys=True, separators=(",", ":"), default=str)
     return hashlib.sha256(payload.encode()).hexdigest()[:16]
+
+
+def _json_safe(value: Any) -> Any:
+    """Convert non-finite floats to explicit JSON-safe strings.
+
+    Profit factor is mathematically infinite when gross loss is zero and gross
+    profit is positive. Strict JSON does not support Infinity, so preserve the
+    meaning as a string rather than crashing or silently replacing the value.
+    """
+    if isinstance(value, dict):
+        return {key: _json_safe(item) for key, item in value.items()}
+    if isinstance(value, list):
+        return [_json_safe(item) for item in value]
+    if isinstance(value, (float, np.floating)):
+        number = float(value)
+        if math.isinf(number):
+            return "Infinity" if number > 0 else "-Infinity"
+        if math.isnan(number):
+            return None
+        return number
+    if isinstance(value, np.integer):
+        return int(value)
+    return value
 
 
 def load_m15(path: Path) -> pd.DataFrame:
@@ -271,11 +295,15 @@ def evaluate_a01(
         if not test(float(value), float(threshold)):
             failures.append(code)
 
-    experiment_hash = _hash({"architecture": "A01", "params": params, "data": data_sha256, "engine": 1})
+    serializable_metrics = _json_safe(metrics)
+    experiment_hash = _hash({"architecture": "A01", "params": params, "data": data_sha256, "engine": 2})
     out_dir = artifacts_root / "experiments" / experiment_hash
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "config.json").write_text(json.dumps(params, indent=2) + "\n", encoding="utf-8")
-    (out_dir / "metrics.json").write_text(json.dumps(metrics, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+    (out_dir / "metrics.json").write_text(
+        json.dumps(serializable_metrics, indent=2, allow_nan=False) + "\n",
+        encoding="utf-8",
+    )
     if not trades_df.empty:
         trades_df.to_csv(out_dir / "trades.csv.gz", index=False, compression="gzip")
     pd.DataFrame({"equity": equity_curve}).to_csv(out_dir / "equity.csv.gz", index=False, compression="gzip")
@@ -286,6 +314,6 @@ def evaluate_a01(
         "status": "PASS" if not failures else "FAIL",
         "progress": "EVALUATED",
         "diagnosis": "PASS" if not failures else ",".join(failures),
-        "metrics": metrics,
+        "metrics": serializable_metrics,
         "evidence": str(out_dir.relative_to(artifacts_root.parent)).replace("\\", "/"),
     }
