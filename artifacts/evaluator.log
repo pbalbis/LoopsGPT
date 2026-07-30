@@ -1,21 +1,21 @@
 {
-  "experiment_hash": "d2cc7e6d7f9f4465",
+  "experiment_hash": "cca59dd54bc4784e",
   "architecture": "A01",
   "status": "FAIL",
   "progress": "EVALUATED",
   "diagnosis": "PF_LOW,Y_LOW,H_LOW,DD_HIGH,FREQ_LOW,PNL_LOW",
   "metrics": {
-    "trades": 330,
-    "pf": 0.8190825983905891,
+    "trades": 331,
+    "pf": 0.8234135916826533,
     "pf_year_min": 0.6844867712313919,
-    "pf_half_min": 0.24291645626438013,
+    "pf_half_min": 0.5695490046766001,
     "max_drawdown": 0.4620499714285704,
-    "trades_per_day": 0.21235521235521235,
-    "pnl_daily": -0.24292926089354572,
-    "net_pnl": -377.51207142857004,
-    "win_rate": 0.5333333333333333,
-    "ending_equity": 622.4879285714283
+    "trades_per_day": 0.21286173633440514,
+    "pnl_daily": -0.23696127698667796,
+    "net_pnl": -368.4747857142842,
+    "win_rate": 0.5347432024169184,
+    "ending_equity": 631.5252142857141
   },
-  "evidence": "artifacts/experiments/d2cc7e6d7f9f4465",
-  "timestamp": "2026-07-29T23:16:37.283225+00:00"
+  "evidence": "artifacts/experiments/cca59dd54bc4784e",
+  "timestamp": "2026-07-30T00:14:50.894710+00:00"
 }
