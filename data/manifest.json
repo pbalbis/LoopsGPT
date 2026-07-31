@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-30T22:19:43.188Z",
-  "complete_through_utc_exclusive": "2026-07-30T00:00:00.000Z",
+  "generated_at": "2026-07-31T00:15:53.625Z",
+  "complete_through_utc_exclusive": "2026-07-31T00:00:00.000Z",
   "reproducibility": {
     "instrument": "xauusd",
     "utc_offset": 0,
@@ -18,13 +18,13 @@
       "timeframe": "m15",
       "timeframe_minutes": 15,
       "path": "data/raw/XAUUSD15.csv.gz",
-      "rows": 100785,
+      "rows": 100877,
       "first_timestamp": "2022-04-26T00:00:00.000Z",
-      "last_timestamp": "2026-07-29T23:45:00.000Z",
-      "sha256": "e17fffb7c800b04763e4391b9e7c52a1be4b7c0b2f1e42fcfa823bd68d021832",
-      "bytes_gzip": 1765274,
-      "downloaded_rows_this_run": 0,
-      "changed": false
+      "last_timestamp": "2026-07-30T23:45:00.000Z",
+      "sha256": "9074a35d3b238fd0409491e11366fc06a4763f72241926efbb3190cf557bb9de",
+      "bytes_gzip": 1766911,
+      "downloaded_rows_this_run": 92,
+      "changed": true
     },
     {
       "source": "Dukascopy Bank historical feed via dukascopy-node",
@@ -34,13 +34,13 @@
       "timeframe": "m1",
       "timeframe_minutes": 1,
       "path": "data/raw/XAUUSD1.csv.gz",
-      "rows": 112519,
+      "rows": 113898,
       "first_timestamp": "2026-04-07T00:00:00.000Z",
-      "last_timestamp": "2026-07-29T23:58:00.000Z",
-      "sha256": "0df6a39e89dc6ccfd53a35b0403ac5d559e832915da11591f48b6dac23416425",
-      "bytes_gzip": 1782215,
-      "downloaded_rows_this_run": 0,
-      "changed": false
+      "last_timestamp": "2026-07-30T23:58:00.000Z",
+      "sha256": "a431321077e6a99b008bf885545aa0e8ffb2bc754c0ef4600a990e9ceec0c6e9",
+      "bytes_gzip": 1803708,
+      "downloaded_rows_this_run": 1379,
+      "changed": true
     }
   ]
 }
