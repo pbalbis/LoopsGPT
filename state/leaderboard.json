@@ -2,8 +2,8 @@
   "leaders": [
     {
       "architecture": "A01",
-      "artifact": "artifacts/experiments/40b9b08a1823530a",
-      "experiment_hash": "40b9b08a1823530a",
+      "artifact": "artifacts/experiments/fe960803c69a1607",
+      "experiment_hash": "fe960803c69a1607",
       "metrics": {
         "ending_equity": 631.5252142857141,
         "max_drawdown": 0.4620499714285704,
@@ -11,14 +11,14 @@
         "pf": 0.8234135916826533,
         "pf_half_min": 0.5695490046766001,
         "pf_year_min": 0.6844867712313919,
-        "pnl_daily": -0.23665689512799243,
+        "pnl_daily": -0.23635329423623105,
         "trades": 331,
-        "trades_per_day": 0.21258831085420682,
+        "trades_per_day": 0.2123155869146889,
         "win_rate": 0.5347432024169184
       },
-      "run_id": 72,
+      "run_id": 73,
       "status": "FAIL"
     }
   ],
-  "updated_run": 72
+  "updated_run": 73
 }
