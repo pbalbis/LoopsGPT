@@ -1,5 +1,5 @@
 {
-  "experiment_hash": "ebd3e1f0385610b1",
+  "experiment_hash": "c1c609d90eb9e9e0",
   "architecture": "A01",
   "status": "FAIL",
   "progress": "EVALUATED",
@@ -10,12 +10,12 @@
     "pf_year_min": 0.6844867712313919,
     "pf_half_min": 0.5695490046766001,
     "max_drawdown": 0.4620499714285704,
-    "trades_per_day": 0.21204356181934658,
-    "pnl_daily": -0.2360504713095991,
+    "trades_per_day": 0.2119078104993598,
+    "pnl_daily": -0.2358993506493497,
     "net_pnl": -368.4747857142842,
     "win_rate": 0.5347432024169184,
     "ending_equity": 631.5252142857141
   },
-  "evidence": "artifacts/experiments/ebd3e1f0385610b1",
-  "timestamp": "2026-08-05T22:29:02.714573+00:00"
+  "evidence": "artifacts/experiments/c1c609d90eb9e9e0",
+  "timestamp": "2026-08-06T00:11:26.745726+00:00"
 }
