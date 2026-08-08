@@ -36,7 +36,7 @@
     },
     "progress": "EVALUATED",
     "status": "FAIL",
-    "timestamp": "2026-08-08T04:28:59.800487+00:00"
+    "timestamp": "2026-08-08T05:57:19.372610+00:00"
   },
   "mode": "DEEP",
   "next_action": "Diagnose A01 failure and generate one bounded refinement",
@@ -45,8 +45,8 @@
     "Which architecture has isolated edge after costs?"
   ],
   "rejected_hypotheses": [],
-  "run_id": 126,
+  "run_id": 127,
   "stall_count": 0,
   "validated_facts": [],
-  "version": 127
+  "version": 128
 }
