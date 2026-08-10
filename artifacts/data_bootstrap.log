@@ -4,7 +4,7 @@
 
 {
   "schema_version": 1,
-  "generated_at": "2026-08-10T13:45:04.191Z",
+  "generated_at": "2026-08-10T15:16:59.573Z",
   "complete_through_utc_exclusive": "2026-08-10T00:00:00.000Z",
   "reproducibility": {
     "instrument": "xauusd",
