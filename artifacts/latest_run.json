@@ -1,8 +1,8 @@
 {
   "architecture": "A01",
   "diagnosis": "PF_LOW,Y_LOW,H_LOW,DD_HIGH,FREQ_LOW,PNL_LOW",
-  "evidence": "artifacts/experiments/fea9db7ac34e62cd",
-  "experiment_hash": "fea9db7ac34e62cd",
+  "evidence": "artifacts/experiments/770516f4a79184e8",
+  "experiment_hash": "770516f4a79184e8",
   "metrics": {
     "ending_equity": 639.9316428571425,
     "max_drawdown": 0.4620499714285704,
@@ -10,12 +10,12 @@
     "pf": 0.8282282862481963,
     "pf_half_min": 0.5695490046766001,
     "pf_year_min": 0.6844867712313919,
-    "pnl_daily": -0.22774722146923207,
+    "pnl_daily": -0.22760325988802524,
     "trades": 333,
-    "trades_per_day": 0.21062618595825428,
+    "trades_per_day": 0.21049304677623262,
     "win_rate": 0.5345345345345346
   },
   "progress": "EVALUATED",
   "status": "FAIL",
-  "timestamp": "2026-08-25T23:39:44.864149+00:00"
+  "timestamp": "2026-08-26T01:59:22.102928+00:00"
 }
