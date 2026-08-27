@@ -1,0 +1,7 @@
+{
+  "atr_mult": 1.2,
+  "tp2_r": 2.0,
+  "session_start": 7,
+  "session_end": 12,
+  "require_ema200": true
+}
