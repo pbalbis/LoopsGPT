@@ -1,6 +1,5 @@
 {
   "artifact_pointers": [
-    "artifacts/experiments/c1c609d90eb9e9e0",
     "artifacts/experiments/86bc31ccc947e781",
     "artifacts/experiments/bb7ef28f085c1348",
     "artifacts/experiments/d52d29dbe6fc41f5",
@@ -19,7 +18,8 @@
     "artifacts/experiments/fea9db7ac34e62cd",
     "artifacts/experiments/770516f4a79184e8",
     "artifacts/experiments/07380214b4950a03",
-    "artifacts/experiments/dfe076ab249d02c5"
+    "artifacts/experiments/dfe076ab249d02c5",
+    "artifacts/experiments/ae545538ee79bdf2"
   ],
   "confidence": 0.0,
   "current_best": null,
@@ -28,23 +28,23 @@
   "last_experiment": {
     "architecture": "A01",
     "diagnosis": "PF_LOW,Y_LOW,H_LOW,DD_HIGH,FREQ_LOW,PNL_LOW",
-    "evidence": "artifacts/experiments/dfe076ab249d02c5",
-    "experiment_hash": "dfe076ab249d02c5",
+    "evidence": "artifacts/experiments/ae545538ee79bdf2",
+    "experiment_hash": "ae545538ee79bdf2",
     "metrics": {
-      "ending_equity": 639.9316428571425,
+      "ending_equity": 629.7230714285708,
       "max_drawdown": 0.4620499714285704,
-      "net_pnl": -360.0683571428559,
-      "pf": 0.8282282862481963,
+      "net_pnl": -370.27692857142756,
+      "pf": 0.8242143374513734,
       "pf_half_min": 0.5695490046766001,
       "pf_year_min": 0.6844867712313919,
-      "pnl_daily": -0.22731588203463127,
-      "trades": 333,
-      "trades_per_day": 0.21022727272727273,
-      "win_rate": 0.5345345345345346
+      "pnl_daily": -0.23361320414601108,
+      "trades": 334,
+      "trades_per_day": 0.2107255520504732,
+      "win_rate": 0.5329341317365269
     },
     "progress": "EVALUATED",
     "status": "FAIL",
-    "timestamp": "2026-08-28T18:44:05.366101+00:00"
+    "timestamp": "2026-08-29T02:12:49.440740+00:00"
   },
   "mode": "DEEP",
   "next_action": "Diagnose A01 failure and generate one bounded refinement",
@@ -53,8 +53,8 @@
     "Which architecture has isolated edge after costs?"
   ],
   "rejected_hypotheses": [],
-  "run_id": 522,
+  "run_id": 523,
   "stall_count": 0,
   "validated_facts": [],
-  "version": 523
+  "version": 524
 }
