@@ -1,6 +1,5 @@
 {
   "artifact_pointers": [
-    "artifacts/experiments/770516f4a79184e8",
     "artifacts/experiments/07380214b4950a03",
     "artifacts/experiments/dfe076ab249d02c5",
     "artifacts/experiments/ae545538ee79bdf2",
@@ -19,7 +18,8 @@
     "artifacts/experiments/b44ab1abc60806f3",
     "artifacts/experiments/dbb8213409ea032a",
     "artifacts/experiments/e2368ac13105f777",
-    "artifacts/experiments/8be0e486756c4bd8"
+    "artifacts/experiments/8be0e486756c4bd8",
+    "artifacts/experiments/8edf5131cd82909d"
   ],
   "confidence": 0.0,
   "current_best": null,
@@ -28,8 +28,8 @@
   "last_experiment": {
     "architecture": "A01",
     "diagnosis": "PF_LOW,Y_LOW,H_LOW,DD_HIGH,FREQ_LOW,PNL_LOW",
-    "evidence": "artifacts/experiments/8be0e486756c4bd8",
-    "experiment_hash": "8be0e486756c4bd8",
+    "evidence": "artifacts/experiments/8edf5131cd82909d",
+    "experiment_hash": "8edf5131cd82909d",
     "metrics": {
       "ending_equity": 629.7230714285708,
       "max_drawdown": 0.4620499714285704,
@@ -37,14 +37,14 @@
       "pf": 0.8242143374513734,
       "pf_half_min": 0.5695490046766001,
       "pf_year_min": 0.6844867712313919,
-      "pnl_daily": -0.2308459654435334,
+      "pnl_daily": -0.2307021361815748,
       "trades": 334,
-      "trades_per_day": 0.2082294264339152,
+      "trades_per_day": 0.20809968847352026,
       "win_rate": 0.5329341317365269
     },
     "progress": "EVALUATED",
     "status": "FAIL",
-    "timestamp": "2026-09-17T21:27:44.131503+00:00"
+    "timestamp": "2026-09-18T00:21:19.558905+00:00"
   },
   "mode": "DEEP",
   "next_action": "Diagnose A01 failure and generate one bounded refinement",
@@ -53,8 +53,8 @@
     "Which architecture has isolated edge after costs?"
   ],
   "rejected_hypotheses": [],
-  "run_id": 638,
+  "run_id": 639,
   "stall_count": 0,
   "validated_facts": [],
-  "version": 639
+  "version": 640
 }
