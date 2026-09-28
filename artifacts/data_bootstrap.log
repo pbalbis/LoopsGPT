@@ -4,7 +4,7 @@
 
 {
   "schema_version": 1,
-  "generated_at": "2026-09-28T00:48:29.997Z",
+  "generated_at": "2026-09-28T06:55:53.848Z",
   "complete_through_utc_exclusive": "2026-09-28T00:00:00.000Z",
   "reproducibility": {
     "instrument": "xauusd",
@@ -27,8 +27,8 @@
       "last_timestamp": "2026-09-27T23:45:00.000Z",
       "sha256": "0f5e945e9a0e35c37216557b2b64efbc0a7fd0ccfe62d50ef0faeb4f900f3502",
       "bytes_gzip": 1834594,
-      "downloaded_rows_this_run": 8,
-      "changed": true
+      "downloaded_rows_this_run": 0,
+      "changed": false
     },
     {
       "source": "Dukascopy Bank historical feed via dukascopy-node",
@@ -43,8 +43,8 @@
       "last_timestamp": "2026-09-27T23:58:00.000Z",
       "sha256": "6ad75bedeba6e9321fc022aa29bb9a31e27d115258fa556a95d89805270438e3",
       "bytes_gzip": 2683895,
-      "downloaded_rows_this_run": 119,
-      "changed": true
+      "downloaded_rows_this_run": 0,
+      "changed": false
     }
   ]
 }
