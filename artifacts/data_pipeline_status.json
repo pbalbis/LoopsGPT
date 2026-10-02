@@ -1,9 +1,9 @@
 {
-  "workflow_run_id": "36969895837",
-  "head_sha": "053bbaa69169dd7ec21a01ed95ea6d6a4e55a3bf",
+  "workflow_run_id": "37007751702",
+  "head_sha": "8aa52227b760f059a8526f308cb61cd78fa9716e",
   "event": "schedule",
   "bootstrap_outcome": "success",
-  "cache_hit": "false",
+  "cache_hit": "true",
   "utc_day": "2026-10-02",
-  "recorded_at": "2026-10-02T05:39:25Z"
+  "recorded_at": "2026-10-02T12:37:15Z"
 }
