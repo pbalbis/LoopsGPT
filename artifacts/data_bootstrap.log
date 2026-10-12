@@ -6,7 +6,7 @@ Error: Request failed with status 202
     at BufferFetcher.fetchBuffer (/home/runner/work/LoopsGPT/LoopsGPT/node_modules/dukascopy-node/dist/index.js:17061:15)
     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
     at async /home/runner/work/LoopsGPT/LoopsGPT/node_modules/dukascopy-node/dist/index.js:16960:22
-    at async Promise.all (index 1)
+    at async Promise.all (index 2)
     at async BufferFetcher.fetch (/home/runner/work/LoopsGPT/LoopsGPT/node_modules/dukascopy-node/dist/index.js:17006:20)
     at async getHistoricalRates (/home/runner/work/LoopsGPT/LoopsGPT/node_modules/dukascopy-node/dist/index.js:17719:25)
     at async updateSpec (file:///home/runner/work/LoopsGPT/LoopsGPT/scripts/bootstrap_data.mjs:143:19)
